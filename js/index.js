@@ -33,7 +33,7 @@ function checkForMobileNavShrink(scrolledPixels) {
 // loading handlers
 function initializeEvents() {
   //scroll listener
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     // shrinking navbar
     checkForNavShrink($(this).scrollTop());
     checkForMobileNavShrink($(this).scrollTop());
@@ -44,50 +44,50 @@ function initializeEvents() {
     window.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: 0
+      top: 0,
     });
   });
   $(".nav-home").click(() => {
     window.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: 0
+      top: 0,
     });
   });
   $("#navMyWorks").click(() => {
     window.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: document.querySelector("#myWorks").offsetTop
+      top: document.querySelector("#myWorks").offsetTop,
     });
   });
   $("#navAboutMe").click(() => {
     window.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: document.querySelector("#aboutMe").offsetTop
+      top: document.querySelector("#aboutMe").offsetTop,
     });
   });
   $("#navContactMe").click(() => {
     window.scrollTo({
       behavior: "smooth",
       left: 0,
-      top: document.querySelector("#contactMe").offsetTop
+      top: document.querySelector("#contactMe").offsetTop,
     });
   });
 
   // icon bounce animation on hover
-  $(".icon-img").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function() {
+  $(".icon-img").bind("webkitAnimationEnd mozAnimationEnd animationEnd", function () {
     $(this).removeClass("animate-bounce");
   });
 
-  $(".icon-img").hover(function() {
+  $(".icon-img").hover(function () {
     $(this).addClass("animate-bounce");
   });
 }
 
-$(function() {
-  window.onbeforeunload = function() {
+$(function () {
+  window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
 

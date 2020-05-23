@@ -208,10 +208,71 @@ body {
   color: rgb(63, 19, 19);
 }
 
+#portrait {
+  margin: 30px;
+}
+
+#aboutWenny {
+  text-align: center;
+}
+
+.arto {
+  text-align: center;
+}
+
+.img {
+  margin: 30px;
+  width: 80%;
+  object-fit: cover;
+  height: 100%; /* only if you want fixed height */
+}
+
 .body-content {
   margin-top: 10%;
   margin-left: 7%;
   margin-right: 7%;
+}
+
+/* Embedded MP3 player*/
+
+audio {
+  box-shadow: none;
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  z-index: 20;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  -webkit-appearance: media-current-time-display;
+  -webkit-user-select: none;
+  flex: none;
+  display: flex;
+  border: none;
+  cursor: default;
+  margin: 0 9px 0 0;
+  padding: 0;
+  line-height: 20px;
+  font-family: "Fredoka One", cursive;
+  font-size: 10px;
+  font-style: normal;
+  color: rgb(61, 61, 61);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-decoration: none;
+}
+audio::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  /* The duration is also specified in MediaControlElements.cpp and LayoutTests/media/media-controls.js */
+  transition: opacity 0.3s;
 }
 
 /* Footer Section */
